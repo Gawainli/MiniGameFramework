@@ -628,7 +628,7 @@ namespace GameFramework.Item
             {
                 int serialId = ++m_Serial;
                 m_ItemsBeingLoaded.Add(itemId, serialId);
-                m_ResourceManager.LoadAsset(itemAssetName, priority, m_LoadAssetCallbacks, ShowItemInfo.Create(serialId, itemId, itemGroup, userData));
+                m_ResourceManager.LoadAssetAsync(itemAssetName, priority, m_LoadAssetCallbacks, ShowItemInfo.Create(serialId, itemId, itemGroup, userData));
                 return;
             }
 
