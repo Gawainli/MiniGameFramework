@@ -365,3 +365,89 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2097400743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7621838879165266099, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+  m_PrefabInstance: {fileID: 7621838880826454804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2097400746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097400743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a57e89ca8e9b1944889855259d456b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &7621838880826454804
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7621838879165266099, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_Name
+      value: MiniGameFramework
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_EntranceProcedureTypeName
+      value: MiniGame.ProcedureLaunch
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[0]
+      value: MiniGame.ProcedureLaunch
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 226461fa415f4c644b788ef21a62259f, type: 3}

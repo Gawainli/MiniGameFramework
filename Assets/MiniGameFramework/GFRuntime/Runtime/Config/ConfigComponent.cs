@@ -24,30 +24,22 @@ namespace UnityGameFramework.Runtime
         private IConfigManager m_ConfigManager = null;
         private EventComponent m_EventComponent = null;
 
-        [SerializeField]
-        private bool m_EnableLoadConfigUpdateEvent = false;
+        [SerializeField] private bool m_EnableLoadConfigUpdateEvent = false;
 
-        [SerializeField]
-        private bool m_EnableLoadConfigDependencyAssetEvent = false;
+        [SerializeField] private bool m_EnableLoadConfigDependencyAssetEvent = false;
 
-        [SerializeField]
-        private string m_ConfigHelperTypeName = "UnityGameFramework.Runtime.DefaultConfigHelper";
+        [SerializeField] private string m_ConfigHelperTypeName = "UnityGameFramework.Runtime.DefaultConfigHelper";
 
-        [SerializeField]
-        private ConfigHelperBase m_CustomConfigHelper = null;
+        [SerializeField] private ConfigHelperBase m_CustomConfigHelper = null;
 
-        [SerializeField]
-        private int m_CachedBytesSize = 0;
+        [SerializeField] private int m_CachedBytesSize = 0;
 
         /// <summary>
         /// 获取全局配置项数量。
         /// </summary>
         public int Count
         {
-            get
-            {
-                return m_ConfigManager.Count;
-            }
+            get { return m_ConfigManager.Count; }
         }
 
         /// <summary>
@@ -55,10 +47,7 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public int CachedBytesSize
         {
-            get
-            {
-                return m_ConfigManager.CachedBytesSize;
-            }
+            get { return m_ConfigManager.CachedBytesSize; }
         }
 
         /// <summary>
@@ -105,14 +94,7 @@ namespace UnityGameFramework.Runtime
                 return;
             }
 
-            if (baseComponent.EditorResourceMode)
-            {
-                m_ConfigManager.SetResourceManager(baseComponent.EditorResourceHelper);
-            }
-            else
-            {
-                m_ConfigManager.SetResourceManager(GameFrameworkEntry.GetModule<IResourceManager>());
-            }
+            m_ConfigManager.SetResourceManager(GameFrameworkEntry.GetModule<IResourceManager>());
 
             ConfigHelperBase configHelper = Helper.CreateHelper(m_ConfigHelperTypeName, m_CustomConfigHelper);
             if (configHelper == null)
