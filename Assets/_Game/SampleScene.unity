@@ -446,7 +446,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3470972342236144587, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
       propertyPath: PlayMode
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3470972342236144587, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
       propertyPath: PackageName

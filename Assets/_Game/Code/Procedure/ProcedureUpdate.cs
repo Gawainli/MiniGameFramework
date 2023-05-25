@@ -1,6 +1,9 @@
+using System;
+using Cysharp.Threading.Tasks;
 using GameFramework.Fsm;
 using GameFramework.Procedure;
 using UnityGameFramework.Runtime;
+using YooAsset;
 
 namespace MiniGame
 {
@@ -10,6 +13,23 @@ namespace MiniGame
         {
             base.OnEnter(procedureOwner);
             Log.Info("ProcedureUpdate OnEnter");
+            GetVersion().Forget();
+        }
+
+        private async UniTaskVoid GetVersion()
+        {
+            await UniTask.Delay(TimeSpan.FromSeconds(0.5f));
+            var op = GameEntry.Resource.UpdatePackageVersionAsync();
+            await op.ToUniTask();
+
+            if (op.Status == EOperationStatus.Succeed)
+            {
+                Log.Info("GetVersion Succeed");
+            }
+            else
+            {
+                Log.Error("GetVersion Failed");
+            }
         }
     }
 }
