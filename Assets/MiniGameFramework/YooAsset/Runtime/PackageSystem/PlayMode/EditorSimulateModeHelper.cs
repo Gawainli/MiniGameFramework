@@ -1,5 +1,6 @@
 ﻿#if UNITY_EDITOR
 using System.Reflection;
+// using YooAsset.Editor;
 
 namespace YooAsset
 {
@@ -15,7 +16,9 @@ namespace YooAsset
 			if (_classType == null)
 				_classType = Assembly.Load("YooAsset.Editor").GetType("YooAsset.Editor.AssetBundleSimulateBuilder");
 
+
 			string manifestFilePath = (string)InvokePublicStaticMethod(_classType, "SimulateBuild", packageName);
+			// string manifestFilePath = AssetBundleSimulateBuilder.SimulateBuild(packageName);	
 			return manifestFilePath;
 		}
 

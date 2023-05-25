@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -43,6 +44,11 @@ namespace MiniGame
             Resource = UnityGameFramework.Runtime.GameEntry.GetComponent<ResourceComponent>();
             Setting = UnityGameFramework.Runtime.GameEntry.GetComponent<SettingComponent>();
             Localization = UnityGameFramework.Runtime.GameEntry.GetComponent<LocalizationComponent>();
+        }
+
+        private void Awake()
+        {
+            UnityEngine.Object.DontDestroyOnLoad(gameObject);
         }
 
         private void Start()

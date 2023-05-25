@@ -15,13 +15,14 @@ namespace MiniGame
         protected internal override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);
-            Debug.Log("ProcedureLaunch OnEnter");
+            Log.Info("ProcedureLaunch OnEnter");
             InitLanguageSettings();
         }
 
         protected internal override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)
         {
             base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
+            ChangeState<ProcedureSplash>(procedureOwner);
         }
 
         protected internal override void OnInit(ProcedureOwner procedureOwner)

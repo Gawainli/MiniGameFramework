@@ -236,7 +236,8 @@ namespace UnityGameFramework.Runtime
             m_ResourceManager.Milliseconds = Milliseconds;
             m_ResourceManager.InstanceRoot = transform;
             //todo: load url from config
-            m_ResourceManager.HostServerURL = "";//SettingsUtils.GetResDownLoadPath();
+            m_ResourceManager.HostServerURL = Constant.HostServerUrl;//SettingsUtils.GetResDownLoadPath();
+            m_ResourceManager.FallbackHostServerURL = Constant.HostServerUrl;//SettingsUtils.GetResDownLoadPath();
             m_ResourceManager.Initialize();
             Log.Info($"AssetsComponent Run Mode：{PlayMode}");
         }
