@@ -31,11 +31,11 @@ namespace MiniGame
                         break;
                     case EPlayMode.OfflinePlayMode:
                         Log.Info("Package resource mode detected.");
-                        ChangeState<ProcedureInitRes>(procedureOwner);
+                        ChangeState<ProcedureInitOfflineRes>(procedureOwner);
                         break;
                     case EPlayMode.HostPlayMode:
                         Log.Info("Updatable resource mode detected.");
-                        ChangeState<ProcedureUpdate>(procedureOwner);
+                        ChangeState<ProcedureUpdateVersion>(procedureOwner);
                         break;
                     default:
                         Log.Error("Invalid resource mode. {0}", GameEntry.Resource.PlayMode);

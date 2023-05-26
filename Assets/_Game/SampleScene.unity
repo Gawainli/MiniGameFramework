@@ -510,35 +510,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
       propertyPath: m_AvailableProcedureTypeNames.Array.size
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
       propertyPath: m_AvailableProcedureTypeNames.Array.data[0]
-      value: MiniGame.ProcedureInitPkg
+      value: MiniGame.ProcedureCreateDownloader
       objectReference: {fileID: 0}
     - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
       propertyPath: m_AvailableProcedureTypeNames.Array.data[1]
-      value: MiniGame.ProcedureInitRes
+      value: MiniGame.ProcedureDownloadFile
       objectReference: {fileID: 0}
     - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
       propertyPath: m_AvailableProcedureTypeNames.Array.data[2]
-      value: MiniGame.ProcedureLaunch
+      value: MiniGame.ProcedureDownloadOver
       objectReference: {fileID: 0}
     - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
       propertyPath: m_AvailableProcedureTypeNames.Array.data[3]
-      value: MiniGame.ProcedurePreload
+      value: MiniGame.ProcedureInitOfflineRes
       objectReference: {fileID: 0}
     - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
       propertyPath: m_AvailableProcedureTypeNames.Array.data[4]
-      value: MiniGame.ProcedureSplash
+      value: MiniGame.ProcedureInitPkg
       objectReference: {fileID: 0}
     - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
       propertyPath: m_AvailableProcedureTypeNames.Array.data[5]
-      value: MiniGame.ProcedureStartGame
+      value: MiniGame.ProcedureLaunch
       objectReference: {fileID: 0}
     - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
       propertyPath: m_AvailableProcedureTypeNames.Array.data[6]
-      value: MiniGame.ProcedureUpdate
+      value: MiniGame.ProcedurePreload
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[7]
+      value: MiniGame.ProcedureSplash
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[8]
+      value: MiniGame.ProcedureStartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[9]
+      value: MiniGame.ProcedureUpdateManifest
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[10]
+      value: MiniGame.ProcedureUpdateVersion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 226461fa415f4c644b788ef21a62259f, type: 3}

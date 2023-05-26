@@ -7,16 +7,16 @@ using YooAsset;
 
 namespace MiniGame
 {
-    public class ProcedureUpdate : ProcedureBase
+    public class ProcedureUpdateVersion : ProcedureBase
     {
         protected internal override void OnEnter(IFsm<IProcedureManager> procedureOwner)
         {
             base.OnEnter(procedureOwner);
             Log.Info("ProcedureUpdate OnEnter");
-            UpdateVersionAndManifest(procedureOwner).Forget();
+            UpdateVersion(procedureOwner).Forget();
         }
 
-        private async UniTaskVoid UpdateVersionAndManifest(IFsm<IProcedureManager> procedureOwner)
+        private async UniTaskVoid UpdateVersion(IFsm<IProcedureManager> procedureOwner)
         {
             await UniTask.Delay(TimeSpan.FromSeconds(0.5f));
             var opVersion = GameEntry.Resource.UpdatePackageVersionAsync();
@@ -25,25 +25,13 @@ namespace MiniGame
             if (opVersion.Status == EOperationStatus.Succeed)
             {
                 Log.Info("GetVersion Succeed");
+                GameEntry.Resource.PackageVersion = opVersion.PackageVersion;
+                ChangeState<ProcedureUpdateManifest>(procedureOwner);
+                
             }
             else
             {
                 Log.Error("GetVersion Failed");
-                return;
-            }
-            
-            var opManifest = GameEntry.Resource.UpdatePackageManifestAsync(GameEntry.Resource.PackageVersion);
-            await opManifest.ToUniTask();
-            
-            if(opManifest.Status == EOperationStatus.Succeed)
-            {
-                Log.Info("GetManifest Succeed");
-                ChangeState<ProcedureDownload>(procedureOwner);
-            }
-            else
-            {
-                Log.Info("GetManifest Error");
-                Log.Error(opManifest.Error);
             }
         }
         
