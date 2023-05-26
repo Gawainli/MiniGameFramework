@@ -133,6 +133,12 @@ namespace GameFramework.Resource
             set;
         }
         
+        string FallbackHostServerURL
+        {
+            get;
+            set;
+        }
+        
         /// <summary>
         /// 卸载资源。
         /// </summary>

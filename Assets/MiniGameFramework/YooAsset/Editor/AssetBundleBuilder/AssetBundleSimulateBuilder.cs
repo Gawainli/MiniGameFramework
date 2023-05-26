@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace YooAsset.Editor
 {
+	[InitializeOnLoad]
 	public static class AssetBundleSimulateBuilder
 	{
 		/// <summary>

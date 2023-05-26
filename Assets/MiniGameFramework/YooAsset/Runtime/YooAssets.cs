@@ -83,6 +83,11 @@ namespace YooAsset
 			}
 		}
 
+		public static void UpdateYooAssets()
+		{
+			Update();
+		}
+
 
 		/// <summary>
 		/// 创建资源包

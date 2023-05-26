@@ -26,30 +26,22 @@ namespace UnityGameFramework.Runtime
         private IDataTableManager m_DataTableManager = null;
         private EventComponent m_EventComponent = null;
 
-        [SerializeField]
-        private bool m_EnableLoadDataTableUpdateEvent = false;
+        [SerializeField] private bool m_EnableLoadDataTableUpdateEvent = false;
 
-        [SerializeField]
-        private bool m_EnableLoadDataTableDependencyAssetEvent = false;
+        [SerializeField] private bool m_EnableLoadDataTableDependencyAssetEvent = false;
 
-        [SerializeField]
-        private string m_DataTableHelperTypeName = "UnityGameFramework.Runtime.DefaultDataTableHelper";
+        [SerializeField] private string m_DataTableHelperTypeName = "UnityGameFramework.Runtime.DefaultDataTableHelper";
 
-        [SerializeField]
-        private DataTableHelperBase m_CustomDataTableHelper = null;
+        [SerializeField] private DataTableHelperBase m_CustomDataTableHelper = null;
 
-        [SerializeField]
-        private int m_CachedBytesSize = 0;
+        [SerializeField] private int m_CachedBytesSize = 0;
 
         /// <summary>
         /// 获取数据表数量。
         /// </summary>
         public int Count
         {
-            get
-            {
-                return m_DataTableManager.Count;
-            }
+            get { return m_DataTableManager.Count; }
         }
 
         /// <summary>
@@ -57,10 +49,7 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public int CachedBytesSize
         {
-            get
-            {
-                return m_DataTableManager.CachedBytesSize;
-            }
+            get { return m_DataTableManager.CachedBytesSize; }
         }
 
         /// <summary>
@@ -94,16 +83,10 @@ namespace UnityGameFramework.Runtime
                 return;
             }
 
-            if (baseComponent.EditorResourceMode)
-            {
-                m_DataTableManager.SetResourceManager(baseComponent.EditorResourceHelper);
-            }
-            else
-            {
-                m_DataTableManager.SetResourceManager(GameFrameworkEntry.GetModule<IResourceManager>());
-            }
+            m_DataTableManager.SetResourceManager(GameFrameworkEntry.GetModule<IResourceManager>());
 
-            DataTableHelperBase dataTableHelper = Helper.CreateHelper(m_DataTableHelperTypeName, m_CustomDataTableHelper);
+            DataTableHelperBase dataTableHelper =
+                Helper.CreateHelper(m_DataTableHelperTypeName, m_CustomDataTableHelper);
             if (dataTableHelper == null)
             {
                 Log.Error("Can not create data table helper.");
@@ -382,7 +365,8 @@ namespace UnityGameFramework.Runtime
 
         private void OnReadDataFailure(object sender, ReadDataFailureEventArgs e)
         {
-            Log.Warning("Load data table failure, asset name '{0}', error message '{1}'.", e.DataAssetName, e.ErrorMessage);
+            Log.Warning("Load data table failure, asset name '{0}', error message '{1}'.", e.DataAssetName,
+                e.ErrorMessage);
             m_EventComponent.Fire(this, LoadDataTableFailureEventArgs.Create(e));
         }
 

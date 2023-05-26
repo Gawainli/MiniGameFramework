@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 185f6993d5150494d98da50e26cb1c25, type: 3}
   m_Name: AssetBundleCollectorSetting
   m_EditorClassIdentifier: 
-  ShowPackageView: 0
+  ShowPackageView: 1
   EnableAddressable: 0
   UniqueBundleName: 0
   ShowEditorAlias: 0
@@ -25,8 +25,24 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: 
-        CollectorGUID: 
+      - CollectPath: Assets/_Game/_Scenes
+        CollectorGUID: 4b19ae5676235ec42a2ce4d7df143395
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+  - PackageName: v0.1
+    PackageDesc: 
+    Groups:
+    - GroupName: Default Group
+      GroupDesc: 
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/_Game/_Scenes
+        CollectorGUID: 4b19ae5676235ec42a2ce4d7df143395
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackDirectory

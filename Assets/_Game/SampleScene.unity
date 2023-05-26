@@ -123,6 +123,74 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &432550802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 432550805}
+  - component: {fileID: 432550804}
+  - component: {fileID: 432550803}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &432550803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432550802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &432550804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432550802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &432550805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432550802}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +203,6 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
-  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -242,18 +309,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &519420033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa635f289da012241a125714a8627f39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,3 +420,141 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2097400743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7621838879165266099, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+  m_PrefabInstance: {fileID: 7621838880826454804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2097400746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097400743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a57e89ca8e9b1944889855259d456b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &7621838880826454804
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3470972342236144587, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: PlayMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3470972342236144587, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: PackageName
+      value: DefaultPackage
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266099, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_Name
+      value: MiniGameFramework
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266108, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_EditorResourceMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621838879165266109, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_EntranceProcedureTypeName
+      value: MiniGame.ProcedureLaunch
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[0]
+      value: MiniGame.ProcedureCreateDownloader
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[1]
+      value: MiniGame.ProcedureDownloadFile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[2]
+      value: MiniGame.ProcedureDownloadOver
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[3]
+      value: MiniGame.ProcedureInitOfflineRes
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[4]
+      value: MiniGame.ProcedureInitPkg
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[5]
+      value: MiniGame.ProcedureLaunch
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[6]
+      value: MiniGame.ProcedurePreload
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[7]
+      value: MiniGame.ProcedureSplash
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[8]
+      value: MiniGame.ProcedureStartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[9]
+      value: MiniGame.ProcedureUpdateManifest
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949074636805865175, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[10]
+      value: MiniGame.ProcedureUpdateVersion
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
