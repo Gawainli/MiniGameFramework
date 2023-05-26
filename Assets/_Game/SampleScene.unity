@@ -452,6 +452,10 @@ PrefabInstance:
       propertyPath: PackageName
       value: DefaultPackage
       objectReference: {fileID: 0}
+    - target: {fileID: 7621838878988650763, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
+      propertyPath: m_ShowFullWindow
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7621838879165266099, guid: 226461fa415f4c644b788ef21a62259f, type: 3}
       propertyPath: m_Name
       value: MiniGameFramework
