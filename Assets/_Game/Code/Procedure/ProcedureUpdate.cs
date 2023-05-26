@@ -13,23 +13,52 @@ namespace MiniGame
         {
             base.OnEnter(procedureOwner);
             Log.Info("ProcedureUpdate OnEnter");
-            GetVersion().Forget();
+            UpdateVersionAndManifest(procedureOwner).Forget();
         }
 
-        private async UniTaskVoid GetVersion()
+        private async UniTaskVoid UpdateVersionAndManifest(IFsm<IProcedureManager> procedureOwner)
         {
             await UniTask.Delay(TimeSpan.FromSeconds(0.5f));
-            var op = GameEntry.Resource.UpdatePackageVersionAsync();
-            await op.ToUniTask();
+            var opVersion = GameEntry.Resource.UpdatePackageVersionAsync();
+            await opVersion.ToUniTask();
 
-            if (op.Status == EOperationStatus.Succeed)
+            if (opVersion.Status == EOperationStatus.Succeed)
             {
                 Log.Info("GetVersion Succeed");
             }
             else
             {
                 Log.Error("GetVersion Failed");
+                return;
+            }
+            
+            var opManifest = GameEntry.Resource.UpdatePackageManifestAsync(GameEntry.Resource.PackageVersion);
+            await opManifest.ToUniTask();
+            
+            if(opManifest.Status == EOperationStatus.Succeed)
+            {
+                Log.Info("GetManifest Succeed");
+                ChangeState<ProcedureDownload>(procedureOwner);
+            }
+            else
+            {
+                Log.Info("GetManifest Error");
+                Log.Error(opManifest.Error);
             }
         }
+        
+        private async UniTaskVoid UpdateManifest()
+        {
+            await UniTask.Delay(TimeSpan.FromSeconds(0.5f));
+            
+            var operation = GameEntry.Resource.UpdatePackageManifestAsync(GameEntry.Resource.PackageVersion);
+            
+            await operation.ToUniTask();
+            
+  
+        }
+        
+        
+        
     }
 }
